@@ -14,6 +14,9 @@ import { postsActions, postsSelectors } from '../store/posts/index';
     };
   }
 )
+
+
+
 export class PostsIndex extends React.Component {
   static contextTypes = {
     router: React.PropTypes.object,
@@ -48,7 +51,7 @@ export class PostsIndex extends React.Component {
       params,
       posts,
     } = this.props;
-
+  
     return (
       <div>
         <div className="row">

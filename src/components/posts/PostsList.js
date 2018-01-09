@@ -2,6 +2,7 @@ import React from 'react';
 import { PostsListRow } from './PostsListRow';
 
 export const PostsList = ({posts, onDelete}) => {
+  console.log(posts);
   return (
     <table className="table table-hover">
       <thead>

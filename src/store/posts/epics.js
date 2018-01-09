@@ -22,8 +22,8 @@ export function fetchPosts(action$) {
     .map(action => action.payload)
     .switchMap(params => {
       return Observable.fromPromise(
-        axios.get(`http://localhost:8081/posts?${querystring.stringify(params)}`)
-      ).map(res => postsActions.fetchPostsSuccess(res.data, params));
+        axios.get(`http://bookcaserest.loc/books`)
+      ).map(res => postsActions.fetchPostsSuccess(res, params));
     });
 }
 

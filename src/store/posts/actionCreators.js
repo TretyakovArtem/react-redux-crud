@@ -15,7 +15,8 @@ export function fetchPosts(payload) {
 }
 
 export function fetchPostsSuccess(posts, params) {
-  const byId = keyBy(posts, (post) => post.id);
+  console.log(posts.data);
+  const byId = keyBy(posts.data.data, (post) => post.id);
   return {type: actionTypes.FETCH_COLLECTION_SUCCESS, payload: {byId, params}};
 }
 
